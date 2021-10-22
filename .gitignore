@@ -30,6 +30,9 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
+## Ignore DSStore
+*.DS_Store
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
