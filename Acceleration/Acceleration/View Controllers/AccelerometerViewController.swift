@@ -26,7 +26,9 @@ class AccelerometerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        xLabel.text = "No sensor data."
+        yLabel.text = ""
+        zLabel.text = ""
         manager.startAccelerometerUpdates(to: motionQueue) { data, error in
             if let error = error {
                 print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")

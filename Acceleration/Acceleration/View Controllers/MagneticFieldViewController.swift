@@ -26,6 +26,9 @@ class MagneticFieldViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        xLabel.text = "No sensor data."
+        yLabel.text = ""
+        zLabel.text = ""
         manager.startMagnetometerUpdates(to: motionQueue) { data, error in
             if let error = error {
                 print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
